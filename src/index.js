@@ -1,10 +1,12 @@
-import { groupBy } from "lodash-es"
-import people from "./people"
+import { groupBy } from "lodash-es";
+import people from "./people";
 
-import './style.scss'
+import './style.scss';
 
-const managerGroups = groupBy(people, "manager")
+import './image-example';
 
-const root = document.createElement("div")
-root.innerHTML = `<pre>${JSON.stringify(managerGroups, null, 2)}</pre>`
-document.body.appendChild(root)
+const managerGroups = groupBy(people, "manager");
+
+const root = document.createElement("div");
+root.innerHTML = `<pre>${JSON.stringify(managerGroups, null, 2)}</pre>`;
+document.body.appendChild(root);
